@@ -1,0 +1,359 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    background:
+        radial-gradient(
+            circle at 10% 100%,
+            rgba(255, 255, 255, 0.13),
+            transparent 35%
+        ),
+        linear-gradient(
+            150deg,
+            #155578 0%,
+            #377c9f 45%,
+            #c5dce7 100%
+        );
+}
+
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.home-container {
+    width: 100%;
+    max-width: 1000px;
+    min-height: 100vh;
+
+    margin: 0 auto;
+
+    padding: 25px 40px 60px;
+
+    position: relative;
+    z-index: 1;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    text-align: center;
+    color: white;
+
+    margin-bottom: 76px;
+}
+
+
+/* LOGO */
+
+.mentoria-logo {
+    width: 105px;
+    height: 105px;
+
+    display: block;
+
+    object-fit: contain;
+
+    margin: 0 auto 12px;
+
+    filter:
+        drop-shadow(
+            0 4px 8px rgba(0, 0, 0, 0.18)
+        );
+}
+
+
+/* BRAND NAME */
+
+.header h1 {
+    font-size: clamp(34px, 6vw, 65px);
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    line-height: 1.15;
+
+    text-shadow:
+        0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+
+/* SUBTITLE */
+
+.header p {
+    margin-top: 17px;
+
+    font-size: clamp(17px, 3vw, 28px);
+
+    letter-spacing: 4px;
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.portal-container {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 38px;
+}
+
+
+.portal-card {
+    width: 100%;
+
+    min-height: 180px;
+
+    padding: 28px 42px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    background: rgba(255, 255, 255, 0.97);
+
+    border-radius: 36px;
+
+    color: #173f5b;
+
+    text-decoration: none;
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.14);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+/* ICON */
+
+.portal-icon {
+    width: 65px;
+
+    flex-shrink: 0;
+
+    text-align: center;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 43px;
+}
+
+
+/* TITLE */
+
+.portal-title {
+    flex: 1;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: clamp(25px, 3.5vw, 40px);
+
+    font-weight: 700;
+}
+
+
+/* ARROW */
+
+.portal-arrow {
+    font-family: Arial, sans-serif;
+
+    font-size: 43px;
+
+    flex-shrink: 0;
+
+    transition:
+        transform 0.2s ease;
+}
+
+
+/* HOVER */
+
+.portal-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 18px 35px rgba(0, 0, 0, 0.20);
+}
+
+.portal-card:hover .portal-arrow {
+    transform: translateX(8px);
+}
+
+
+/* TAP */
+
+.portal-card:active {
+    transform: scale(0.985);
+}
+
+
+/* =========================
+   BACKGROUND CIRCLES
+========================= */
+
+.circle-one {
+    position: fixed;
+
+    width: 330px;
+    height: 330px;
+
+    left: -150px;
+    bottom: -120px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255, 255, 255, 0.06);
+
+    pointer-events: none;
+}
+
+.circle-two {
+    position: fixed;
+
+    width: 250px;
+    height: 250px;
+
+    right: -130px;
+    bottom: 80px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255, 255, 255, 0.05);
+
+    pointer-events: none;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .home-container {
+        padding:
+            22px 20px 45px;
+    }
+
+    .header {
+        margin-bottom: 76px;
+    }
+
+    .mentoria-logo {
+        width: 88px;
+        height: 88px;
+    }
+
+    .header h1 {
+        font-size: 40px;
+    }
+
+    .header p {
+        margin-top: 14px;
+
+        font-size: 18px;
+
+        letter-spacing: 3px;
+    }
+
+    .portal-container {
+        gap: 30px;
+    }
+
+    .portal-card {
+        min-height: 150px;
+
+        padding: 24px 22px;
+
+        gap: 13px;
+
+        border-radius: 32px;
+    }
+
+    .portal-icon {
+        width: 43px;
+
+        font-size: 36px;
+    }
+
+    .portal-title {
+        font-size: 27px;
+    }
+
+    .portal-arrow {
+        font-size: 36px;
+    }
+}
+
+
+/* =========================
+   SMALL PHONES
+========================= */
+
+@media (max-width: 360px) {
+
+    .home-container {
+        padding:
+            20px 14px 35px;
+    }
+
+    .header h1 {
+        font-size: 30px;
+    }
+
+    .header p {
+        font-size: 15px;
+
+        letter-spacing: 2.5px;
+    }
+
+    .portal-card {
+        min-height: 125px;
+
+        padding: 20px 15px;
+
+        gap: 9px;
+
+        border-radius: 26px;
+    }
+
+    .portal-icon {
+        width: 37px;
+
+        font-size: 31px;
+    }
+
+    .portal-title {
+        font-size: 22px;
+    }
+
+    .portal-arrow {
+        font-size: 31px;
+    }
+}
