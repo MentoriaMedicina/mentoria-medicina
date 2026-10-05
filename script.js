@@ -1,7 +1,6 @@
-/* =========================================
-   MENTORIA MEDICINA
-   STUDENT PORTAL
-========================================= */
+// =========================================================
+// MENTORIA MEDICINA - STUDENT PORTAL
+// =========================================================
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -11,9 +10,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
         card.addEventListener("click", () => {
 
-            const pageName = card.dataset.page;
+            card.style.transform = "scale(0.97)";
 
-            console.log("Opening:", pageName);
+            setTimeout(() => {
+                card.style.transform = "";
+            }, 150);
 
         });
 
